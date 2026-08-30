@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(20, 20, 20);
+}
+
+.centralizadora {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#moldura_titulo {
+    font-family: monospace;
+    width: var(--tamanho);
+}
+
+#titulo {
+    overflow: hidden;
+    border-right: 4px solid;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+    animation:
+        digitar 3s steps(var(--titulo_length), end),
+        piscar 0.5s step-end infinite;
+}
+
+@keyframes digitar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes piscar {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(255, 255, 255); }
+}
