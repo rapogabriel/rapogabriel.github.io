@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raposo</title>
+    <title>Terminal - Gabriel Raposo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="centralizadora">
-        <div id="moldura_titulo">
-            <h1 id="titulo">Terminal Raposo</h1>
+    <div id="terminal">
+        <div id="output-container">
+            <div class="output">Bem-vindo ao terminal web interativo. Digite <span class="highlight">'help'</span> para ver os comandos disponíveis.</div>
+        </div>
+        
+        <!-- Linha de comando atual -->
+        <div class="command-line">
+            <span class="prompt-user">gabriel@pop-os</span><span class="prompt-separator">:</span><span class="prompt-path">~</span>$ 
+            <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus>
         </div>
     </div>
-    <script src="app.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

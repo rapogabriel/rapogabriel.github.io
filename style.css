@@ -1,35 +1,59 @@
-body{
-    background-color: rgb(20, 20, 20);
-}
-
-.centralizadora {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#moldura_titulo {
-    font-family: monospace;
-    width: var(--tamanho);
-}
-
-#titulo {
-    overflow: hidden;
-    border-right: 4px solid;
-    white-space: nowrap;
-    color: rgb(255, 255, 255);
-    width: 100%;
+/* Estilos base do terminal */
+body {
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #d4d4d4; /* Texto claro */
+    font-family: 'Consolas', 'Courier New', monospace;
     margin: 0;
-    animation:
-        digitar 3s steps(var(--titulo_length), end),
-        piscar 0.5s step-end infinite;
+    padding: 20px;
+    overflow-x: hidden;
 }
 
-@keyframes digitar {
-    from { width: 0; }
-    to { width: 100%; }
+#terminal {
+    max-width: 800px;
+    margin: 0 auto;
 }
-@keyframes piscar {
-    from, to { border-color: transparent; }
-    50% { border-color: rgb(255, 255, 255); }
+
+.output {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    line-height: 1.5;
 }
+
+.command-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Cores do prompt */
+.prompt-user {
+    color: #4dc71f;
+    font-weight: bold;
+}
+
+.prompt-separator {
+    color: #d4d4d4;
+}
+
+.prompt-path {
+    color: #3b8eea;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Campo de input invisível, estilo texto puro */
+input[type="text"] {
+    background: transparent;
+    border: none;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 16px;
+    outline: none;
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+/* Cores de destaque para os resultados */
+.error { color: #f44336; }
+.highlight { color: #e5c07b; font-weight: bold; }
+.success { color: #98c379; }
