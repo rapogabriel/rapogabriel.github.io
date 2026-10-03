@@ -74,7 +74,7 @@ function processCommand(cmd, rawInput) {
     } else {
         const errorSpan = document.createElement('span');
         errorSpan.className = 'error';
-        errorSpan.textContent = `bash: ${cmd}: comando não encontrado`;
+        errorSpan.textContent = `bash: ${cmd}: scomando não encontrado`;
         responseElement.appendChild(errorSpan);
     }
     
