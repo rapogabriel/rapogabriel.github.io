@@ -72,7 +72,7 @@ function processCommand(cmd, rawInput) {
     if (commands[cmd]) {
         responseElement.innerHTML = commands[cmd];
     } else {
-        responseElement.innerHTML = `<span class="error">bash: ${cmd}: comando não encontrado</span>`;
+        responseElement.innerHTML = `<span class="error">bash: comando não encontrado</span>`;
     }
     
     outputContainer.appendChild(responseElement);
