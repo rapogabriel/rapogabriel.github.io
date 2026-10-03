@@ -52,7 +52,11 @@ function printEmptyPrompt() {
 function processCommand(cmd, rawInput) {
     // 1. Imprime a linha do comando que o usuário digitou
     const cmdElement = document.createElement('div');
-    cmdElement.innerHTML = `<span class="prompt-user">gabriel@pop-os</span><span class="prompt-separator">:</span><span class="prompt-path">~</span>$ ${rawInput}`;
+    cmdElement.innerHTML = `<span class="prompt-user">gabriel@pop-os</span><span class="prompt-separator">:</span><span class="prompt-path">~</span>$ `;
+    
+    const textNode = document.createTextNode(rawInput);
+    cmdElement.appendChild(textNode);
+    
     outputContainer.appendChild(cmdElement);
 
     // 2. Executa a ação do comando
